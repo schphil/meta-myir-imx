@@ -173,7 +173,7 @@ echo "# i.MX Yocto Project Release layers" >> $BUILD_DIR/conf/bblayers.conf
 hook_in_layer meta-myir/meta-bsp
 hook_in_layer meta-myir/meta-sdk
 hook_in_layer meta-myir/meta-ml
-hook_in_layer meta-nxp-demo-experience
+#hook_in_layer meta-nxp-demo-experience
 
 echo "" >> $BUILD_DIR/conf/bblayers.conf
 echo "BBLAYERS += \"\${BSPDIR}/sources/meta-browser\"" >> $BUILD_DIR/conf/bblayers.conf
