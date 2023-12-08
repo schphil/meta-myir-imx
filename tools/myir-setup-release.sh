@@ -195,7 +195,9 @@ if [ -d ../sources/meta-ivi ]; then
     echo "BBLAYERS += \"\${BSPDIR}/sources/meta-ivi/meta-ivi-test\"" >> $BUILD_DIR/conf/bblayers.conf
 fi
 
-#echo "IMAGE_INSTALL_append = \" openssh\"" >> $BUILD_DIR/conf/local.conf
+echo "CORE_IMAGE_EXTRA_INSTALL += \" openssh\"" >> $BUILD_DIR/conf/local.conf
+echo "PACKAGE_EXCLUDE += \" packagegroup-core-ssh-dropbear\"" >> $BUILD_DIR/conf/local.conf
+echo "CORE_IMAGE_EXTRA_INSTALL += \" packagegroup-core-ssh-openssh\"" >> $BUILD_DIR/conf/local.conf
 
 echo BSPDIR=$BSPDIR
 echo BUILD_DIR=$BUILD_DIR
